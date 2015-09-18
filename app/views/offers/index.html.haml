@@ -1,0 +1,33 @@
+%h1 Listing offers
+
+%table.table.table-bordered
+  %thead
+    %tr
+      %th Title
+      %th Type
+      %th End Date
+      %th Min Price
+      %th Max Price
+      %th Category
+      %th Active
+      %th
+      %th
+      %th
+
+  %tbody
+    - @offers.each do |offer|
+      %tr
+        %td= offer.title
+        %td= offer.kind
+        %td= offer.end_date
+        %td= offer.min_price
+        %td= offer.max_price
+        %td= offer.sub_category
+        %td= offer.active
+        %td= link_to 'Show', offer
+        %td= link_to 'Edit', edit_offer_path(offer)
+        %td= link_to 'Destroy', offer, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Offer', new_offer_path

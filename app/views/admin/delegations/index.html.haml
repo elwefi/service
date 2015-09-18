@@ -1,0 +1,19 @@
+%h1 Listing admin_delegations
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_delegations.each do |admin_delegation|
+      %tr
+        %td= link_to 'Show', admin_delegation
+        %td= link_to 'Edit', edit_admin_delegation_path(admin_delegation)
+        %td= link_to 'Destroy', admin_delegation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Delegation', new_admin_delegation_path

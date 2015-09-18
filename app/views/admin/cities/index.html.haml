@@ -1,0 +1,19 @@
+%h1 Listing admin_cities
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_cities.each do |admin_city|
+      %tr
+        %td= link_to 'Show', admin_city
+        %td= link_to 'Edit', edit_admin_city_path(admin_city)
+        %td= link_to 'Destroy', admin_city, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New City', new_admin_city_path

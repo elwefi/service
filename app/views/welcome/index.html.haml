@@ -1,0 +1,24 @@
+%h1 Welcome#index
+%p Find me in app/views/welcome/index.html.haml
+%button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "@mdo", :type => "button"} Open modal for @mdo
+%button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "@fat", :type => "button"} Open modal for @fat
+%button.btn.btn-primary{"data-target" => "#exampleModal", "data-toggle" => "modal", "data-whatever" => "@getbootstrap", :type => "button"} Open modal for @getbootstrap
+\...more buttons...
+#exampleModal.modal.fade{"aria-labelledby" => "exampleModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %button.close{"aria-label" => "Close", "data-dismiss" => "modal", :type => "button"}
+          %span{"aria-hidden" => "true"} &times;
+        %h4#exampleModalLabel.modal-title New message
+      .modal-body
+        %form
+          .form-group
+            %label.control-label{:for => "recipient-name"} Recipient:
+            %input#recipient-name.form-control{:type => "text"}
+          .form-group
+            %label.control-label{:for => "message-text"} Message:
+            %textarea#message-text.form-control
+      .modal-footer
+        %button.btn.btn-default{"data-dismiss" => "modal", :type => "button"} Close
+        %button.btn.btn-primary{:type => "button"} Send message

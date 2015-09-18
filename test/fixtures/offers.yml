@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  description: MyString
+  type: 
+  active: 
+  end_date: 2015-09-10
+  tag: MyString
+  min_price: 1.5
+  max_price: 1.5
+  sub_category_id: 
+  user_id: 
+  city_id: 
+
+two:
+  title: MyString
+  description: MyString
+  type: 
+  active: 
+  end_date: 2015-09-10
+  tag: MyString
+  min_price: 1.5
+  max_price: 1.5
+  sub_category_id: 
+  user_id: 
+  city_id: 

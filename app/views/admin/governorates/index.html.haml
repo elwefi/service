@@ -1,0 +1,19 @@
+%h1 Listing admin_governorates
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_governorates.each do |admin_governorate|
+      %tr
+        %td= link_to 'Show', admin_governorate
+        %td= link_to 'Edit', edit_admin_governorate_path(admin_governorate)
+        %td= link_to 'Destroy', admin_governorate, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Governorate', new_admin_governorate_path
